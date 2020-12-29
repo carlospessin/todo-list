@@ -19,6 +19,8 @@
 # Clone repository
 $ https://github.com/carlospessin/Happy
 
+```
+
 #### :computer: Autor
 
 <table>
@@ -42,4 +44,3 @@ $ https://github.com/carlospessin/Happy
 #### :memo: License
 
 This project is under the MIT license - See the file [LICENSE.md](https://github.com/carlospessin/todo-app/blob/master/LICENSE.md) for details.
-```
