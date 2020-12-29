@@ -1,0 +1,42 @@
+body {
+  background-color: #222222;
+}
+
+h1 {
+  color: #666;
+}
+.tasks {
+  color: #ddd;
+}
+.row {
+  margin-top: 70px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-bottom: 1px dotted #666;
+}
+
+/* modal */
+
+.modal-body, .modal-footer {
+  background-color: #222;
+}
+
+.modal-body, .modal-content {
+  border-radius: 10px;
+}
+
+#id {
+  display: none;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+input[type=checkbox]:checked ~ label {
+  text-decoration: line-through;
+  color: #666;
+}
