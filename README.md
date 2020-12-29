@@ -19,18 +19,6 @@
 # Clone repository
 $ https://github.com/carlospessin/Happy
 
-# Installs dependencies.
-$ npm install
-or
-$ yarn install
-
-# Iniciar o servidor
-$ npm start
-or
-$ yarn start
-
-```
-
 #### :computer: Autor
 
 <table>
@@ -54,3 +42,4 @@ $ yarn start
 #### :memo: License
 
 This project is under the MIT license - See the file [LICENSE.md](https://github.com/carlospessin/todo-app/blob/master/LICENSE.md) for details.
+```
