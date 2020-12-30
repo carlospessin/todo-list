@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 
-<?php 
-  include 'db.php'; 
+<?php include 'db.php'; 
+$sql = "SELECT * FROM tasks";
 
-  $sql = "SELECT * FROM tasks";
-  $rows = $db->query($sql);
-
+$rows = $db->query($sql);
 ?>
 
 <html lang="en">
@@ -58,7 +56,7 @@
                     <?php } else { ?>
                     <input type="checkbox" class="check-box" id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo echo $row['name'];?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
                     <?php } ?>
                   </div>
                 </td>
