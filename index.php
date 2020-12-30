@@ -63,7 +63,7 @@ $rows = $db->query($sql);
 
                 <td>
                   <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update"
-                    dataId="<?php echo $row['id'];?>" dataName="<?php echo $row['name'];?>"></button>
+                    dataId="<?php echo $row['id'];?>" dataName="<?php echo utf8_encode($row['name']);?>"></button>
                 </td>
                 <td><a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger"></a></td>
               </tr>
