@@ -14,15 +14,25 @@ $rows = $db->query($sql);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
   <title>Todo List</title>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-  </script>
+
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <center>
+        <label id="switch" class="switch">
+          <input type="checkbox" onchange="toggleTheme()" id="slider">
+          <span class="slider round">
+          </span>
+        </label>
+        <!-- <button id="switch" onclick="toggleTheme()">Switch</button> -->
+
         <h1>todo list</h1>
         <a href="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add"></a>
         <a href="" class="btn btn-light"></a>
@@ -38,8 +48,15 @@ $rows = $db->query($sql);
                 </th>
                 <td class="col-md-11">
                   <div class="tasks">
-                    <input type="checkbox" id="<?php echo $row['id'];?>" />
+                    <?php if($row['checked']) {?>
+                    <input type="checkbox" class="check-box" checked id="<?php echo $row['id'];?>"
+                      data-todo-id="<?php echo $row['id'];?>" />
                     <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
+                    <?php } else { ?>
+                    <input type="checkbox" class="check-box" id="<?php echo $row['id'];?>"
+                      data-todo-id="<?php echo $row['id'];?>" />
+                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
+                    <?php } ?>
                   </div>
                 </td>
 
@@ -100,6 +117,7 @@ $rows = $db->query($sql);
     </div>
   </div>
 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
     integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
@@ -109,6 +127,7 @@ $rows = $db->query($sql);
   </script>
 
   <script type="text/javascript">
+  // Adicionar valores ao modal
   var update = document.getElementById('update')
   update.addEventListener('show.bs.modal', function(event) {
 
@@ -124,6 +143,58 @@ $rows = $db->query($sql);
     modalId.value = dataId
   })
   </script>
+
+  <script>
+  // theme/color-scheme
+  function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+  }
+
+  // toggle light e dark theme
+  function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+    } else {
+      setTheme('theme-dark');
+    }
+  }
+
+  (function() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-dark');
+    } else {
+      setTheme('theme-light');
+    }
+  })();
+  </script>
+
+  <script>
+  $(".check-box").click(function(e) {
+    const id = $(this).attr('data-todo-id');
+
+
+    $.post('check.php', {
+        id: id
+      },
+      (data) => {
+
+        if (data != 'error') {
+          const h2 = $(this).next();
+          if (data === '1') {
+            h2.removeClass('checked');
+          } else {
+            h2.addClass('checked');
+          }
+        }
+
+      }
+
+    );
+  });
+  </script>
+
+
 </body>
 
 </html>
