@@ -19,6 +19,9 @@
 # Clone repository
 $ https://github.com/carlospessin/todo-list
 
+# Edit db.php with your credentials
+
+# Run/import database: assets/todo-list.sql
 ```
 
 #### :memo: License
