@@ -53,18 +53,18 @@ $rows = $db->query($sql);
                     <?php if($row['checked']) {?>
                     <input type="checkbox" class="check-box" checked id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo utf8_encode($row['name']);?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
                     <?php } else { ?>
                     <input type="checkbox" class="check-box" id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo utf8_encode($row['name']);?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
                     <?php } ?>
                   </div>
                 </td>
 
                 <td>
                   <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#update"
-                    dataId="<?php echo $row['id'];?>" dataName="<?php echo utf8_encode($row['name']);?>"></button>
+                    dataId="<?php echo $row['id'];?>" dataName="<?php echo $row['name'];?>"></button>
                 </td>
                 <td><a href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-danger"></a></td>
               </tr>
