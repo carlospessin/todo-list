@@ -1,4 +1,5 @@
 <p align="center">
+  Stuyding CRUD
   A minimalist todo list with php mysql.
 </p>
 
@@ -7,6 +8,8 @@
 <p align="center">
   <img src="assets/model.png">
 </p>
+
+---
 
 #### :zap: Implementations
 
