@@ -1,0 +1,19 @@
+#switch, .btn {
+  display:none;
+}
+
+.table>:not(caption)>*>* {
+  text-align: center;
+}
+
+.col-md-11 {
+  width: 100%;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-bottom: 1px solid #eee;
+}
+
+.tasks {
+  color: #333;
+}

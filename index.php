@@ -14,6 +14,7 @@ $rows = $db->query($sql);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -35,10 +36,10 @@ $rows = $db->query($sql);
 
         <h1>todo list</h1>
         <a href="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#add"></a>
-        <a href="" class="btn btn-light"></a>
+        <a href="" class="btn btn-secondary" onclick="print()"></a>
 
         <div class="col-md-6 col-md-offset-1">
-          <table class="table">
+          <table class="table table-hover">
 
             <tbody>
               <tr>

@@ -14,7 +14,7 @@ h1 {
 }
 
 tbody, td, tfoot, th, thead, tr {
-  border-bottom: 1px dotted var(--font-color);
+  border-bottom: 1px solid var(--line-color);
 }
 
 /* modal */
@@ -47,12 +47,14 @@ input[type=checkbox]:checked ~ label {
   --color-secondary: #fbfbfe;
   --color-tasks: #222;
   --font-color: #666;
+  --line-color: #ddd;
 }
 .theme-light {
   --color-primary: #222222;
   --color-secondary: #243133;
   --color-tasks: #ddd;
   --font-color: #666;
+  --line-color: #333;
 }
 
 /* The switch - the box around the slider */
