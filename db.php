@@ -11,6 +11,7 @@ $db_pass = 'a2170668';
 $db_name = 'heroku_befb7e2cd27cbb2';
 
 $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+mysqli_set_charset($db, "utf8");
 
 if (!$db) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
