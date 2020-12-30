@@ -10,7 +10,7 @@
 
 #### :zap: Implementations
 
-[] Better visual buttons for smartphones;
+[ ] Better visual buttons for smartphones;
 
 #### :information_source: How to use
 
