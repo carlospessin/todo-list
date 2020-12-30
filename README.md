@@ -17,29 +17,9 @@
 ```bash
 
 # Clone repository
-$ https://github.com/carlospessin/Happy
+$ https://github.com/carlospessin/todo-list
 
 ```
-
-#### :computer: Autor
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://www.linkedin.com/in/carlospessin/">
-        <img src="https://avatars2.githubusercontent.com/u/53182559?s=460&u=0f5fa7bc45e091e71bde6809e640d05da9a3fa6d&v=4" width="100px;" alt="Carlos Pessin"/>
-        <br />
-        <sub>
-          <b>Carlos Pessin</b>
-        </sub>
-       </a>
-       <br />
-       <a href="https://www.linkedin.com/in/carlospessin/" title="Linkedin">@carlospessin</a>
-       <br />
-       <a href="https://www.linkedin.com/in/carlospessin/" title="Code"></a>
-    </td>
-  </tr>
-</table>
 
 #### :memo: License
 
