@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 
-<?php include 'db.php'; 
-$sql = "SELECT * FROM tasks";
+<?php 
+  header('Content-Type: text/html; charset=utf-8');
+  include 'db.php'; 
 
-$rows = $db->query($sql);
+  mysql_query("SET NAMES 'utf8'");
+  mysql_query('SET character_set_connection=utf8');
+  mysql_query('SET character_set_client=utf8');
+  mysql_query('SET character_set_results=utf8');
+
+  $sql = "SELECT * FROM tasks";
+  $rows = $db->query($sql);
+
 ?>
 
 <html lang="en">
@@ -52,11 +60,11 @@ $rows = $db->query($sql);
                     <?php if($row['checked']) {?>
                     <input type="checkbox" class="check-box" checked id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo utf8_decode($row['name']);?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
                     <?php } else { ?>
                     <input type="checkbox" class="check-box" id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo echo utf8_decode($row['name']);?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo echo $row['name'];?></label>
                     <?php } ?>
                   </div>
                 </td>
