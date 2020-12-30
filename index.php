@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<?php include 'db.php'; 
+<?php 
+header('Content-Type: text/html; charset=utf-8');
+include 'db.php'; 
 $sql = "SELECT * FROM tasks";
 
 $rows = $db->query($sql);
