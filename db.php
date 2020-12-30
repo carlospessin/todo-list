@@ -5,10 +5,12 @@
 // $db_pass = '';
 // $db_name = 'todo-list';
 
-$db_host = 'us-cdbr-east-02.cleardb.com';
-$db_user = 'be54de530cabb2';
-$db_pass = 'a2170668';
-$db_name = 'heroku_befb7e2cd27cbb2';
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$db_host = $url["host"];
+$db_user = $url["user"];
+$db_pass = $url["pass"];
+$db_name = substr($url["path"], 1);
 
 $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 mysqli_set_charset($db, "utf8");
