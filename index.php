@@ -52,11 +52,11 @@ $rows = $db->query($sql);
                     <?php if($row['checked']) {?>
                     <input type="checkbox" class="check-box" checked id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo utf8_encode($row['name']);?></label>
                     <?php } else { ?>
                     <input type="checkbox" class="check-box" id="<?php echo $row['id'];?>"
                       data-todo-id="<?php echo $row['id'];?>" />
-                    <label for="<?php echo $row['id'];?>"><?php echo $row['name'];?></label>
+                    <label for="<?php echo $row['id'];?>"><?php echo utf8_encode($row['name']);?></label>
                     <?php } ?>
                   </div>
                 </td>
