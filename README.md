@@ -1,5 +1,5 @@
 <p align="center">
-  Stuyding CRUD
+  Stuyding CRUD<br>
   A minimalist todo list with php mysql.
 </p>
 
